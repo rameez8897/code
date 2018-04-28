@@ -1,0 +1,40 @@
+//Code to print the pattern of squares of numbers
+//Date:-28_April_2018
+//Time:-11:08 PM
+//Designed by Rameez-Ahmad Dar
+#include<stdio.h>
+int main()
+{
+	int i,j,var[50][50],n;
+	printf("n=\n");
+	scanf("%d",&n);
+	printf("The star pattern is: \n");
+	/*for(i=0;i<n;i++)
+	{
+		for(j=0;j<2*i;j++)
+		{
+			var[i][j]=1;
+			//printf("%d",var[i][j]);
+		}
+		//printf("\n");
+	}*/
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i*i;j++)
+		{
+			printf("%c",(var[i][j]='*'));
+		}
+		printf("\n");
+	}
+	printf("\nOR\n");
+	printf("\nThe Digit patter is:\n");
+	for(i=1;i<=n;i++)
+	{
+		for(j=1;j<=i*i;j++)
+		{
+			printf("%d ",(var[i][j]=j)); //You ca remove the space after the format specifier %d to get the continuous pattern
+		}
+		printf("\n");
+	}
+	return 0;
+}
